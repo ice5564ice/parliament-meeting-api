@@ -6,7 +6,7 @@
 	{
 		$pwd = mysqli_real_escape_string($mysqli, trim($request->password));
 		$personalid = mysqli_real_escape_string($mysqli, trim($request->username));
-		$sql = "SELECT * FROM councilmember where PersonalID='$personalid' and Pass='$pwd'";
+		$sql = "SELECT * FROM councilmember where PersonalID='$personalid' and Password='$pwd'";
 	
 		if($result = mysqli_query($mysqli,$sql))
 		{
