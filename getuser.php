@@ -4,7 +4,7 @@
 $postdata = file_get_contents("php://input");
 $personalid=$_GET["username"];
  
-$sql="SELECT * FROM councilmember where PersonalID='610705010000005'";
+$sql="SELECT * FROM councilmember where PersonalID='6107050000001'";
  
 if($result = mysqli_query($mysqli,$sql))
 {
