@@ -2,7 +2,7 @@
   include_once("config.php");
  
 $postdata = file_get_contents("php://input");
-$empid=$_GET["personalid"];
+$personalid=$_GET["username"];
  
 $sql="SELECT * FROM councilmember where PersonalID='$personalid'";
  
