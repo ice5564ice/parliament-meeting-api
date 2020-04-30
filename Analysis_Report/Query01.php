@@ -1,5 +1,5 @@
 <?php
-  include_once("../analysis_report/config.php");
+  include_once("../config.php");
  
 $postdata = file_get_contents("php://input");
 $personalid=$_GET["username"];
