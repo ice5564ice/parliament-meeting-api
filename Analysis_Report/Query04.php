@@ -3,9 +3,9 @@
  
 $postdata = file_get_contents("php://input");
  
-$sql="SELECT p.PartyName,COUNT(*) AS members,CONCAT(FORMAT(COUNT(*)*100/(SELECT count( * ) 
+$sql="SELECT p.PartyName,COUNT(*) AS members,FORMAT(COUNT(*)*100/(SELECT count( * ) 
             FROM councilmember 
-            WHERE PartyName IS NOT NULL),2),"%") AS parcentage
+            WHERE PartyName IS NOT NULL),2) AS parcentage
 FROM politicalparty p,councilmember m
 WHERE m.PartyName = p.PartyName
 GROUP BY m.PartyName
