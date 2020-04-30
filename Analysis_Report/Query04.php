@@ -2,7 +2,6 @@
   include_once("../config.php");
  
 $postdata = file_get_contents("php://input");
-$personalid=$_GET["username"];
  
 $sql="SELECT p.PartyName,COUNT(*) AS members,CONCAT(FORMAT((COUNT(*)*100 / 
             (SELECT count( * ) 
