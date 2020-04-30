@@ -6,7 +6,7 @@ $postdata = file_get_contents("php://input");
 $sql="SELECT p.PartyName,COUNT(*) AS members,CONCAT(FORMAT((COUNT(*)*100 / 
             (SELECT count( * ) 
             FROM councilmember c 
-            WHERE c.PartyName != NULL)),2) ,  "%") AS percentage
+            )),2) ,  "%") AS percentage
 FROM politicalparty p,councilmember m
 WHERE m.PartyName = p.PartyName
 GROUP BY m.PartyName
