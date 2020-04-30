@@ -7,9 +7,10 @@ $sql="SELECT p.PartyName,COUNT(*) AS members,CONCAT(FORMAT((COUNT(*)*100 /
             (SELECT count( * ) 
             FROM councilmember 
             WHERE PartyName IS NOT NULL)),2) ,  "%") AS percentage
-      FROM politicalparty p,councilmember m
-      GROUP BY m.PartyName = p.partyName
-      ORDER BY members;";
+FROM politicalparty p,councilmember m
+WHERE m.PartyName = p.PartyName
+GROUP BY m.PartyName
+ORDER BY members;";
  
 if($result = mysqli_query($mysqli,$sql))
 {
