@@ -4,7 +4,11 @@
 $postdata = file_get_contents("php://input");
 $personalid=$_GET["username"];
  
-$sql="SELECT * FROM councilmember where PersonalID='$personalid'";
+$sql="SELECT PersonalID,PartyName,p.PartyPosName,SubMinistryName,c.CouncilposName,mn.MinistryPosName,
+        Surname,Lastname,DOB,EducationDegree,m.Password,MemberPicture
+FROM councilmember m,PartyPos p,councilpos c,ministrypos mn
+WHERE m.PartyPosID = p.PartyPosID AND m.CouncilPosID = c.CouncilPosID
+        AND m.MinistryPosID = mn.MinistryPosID AND m.PersonalID = $personalid;";
  
 if($result = mysqli_query($mysqli,$sql))
 {
