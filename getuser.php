@@ -8,7 +8,7 @@ $sql="SELECT PersonalID,PartyName,p.PartyPosName,SubMinistryName,c.CouncilposNam
         Surname,Lastname,DOB,EducationDegree,m.Password,MemberPicture
 FROM councilmember m,PartyPos p,councilpos c,ministrypos mn
 WHERE m.PartyPosID = p.PartyPosID AND m.CouncilPosID = c.CouncilPosID
-        AND m.MinistryPosID = mn.MinistryPosID AND m.PersonalID = $personalid;";
+        AND m.MinistryPosID = mn.MinistryPosID AND m.PersonalID = $personalid";
  
 if($result = mysqli_query($mysqli,$sql))
 {
