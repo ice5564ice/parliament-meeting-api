@@ -14,7 +14,8 @@ $sql="SELECT m.PartyName,
         /(SELECT COUNT(*) 
         FROM attendees )*100),2) AS Percentage
 FROM   councilmember m
-GROUP BY m.partyName;";
+GROUP BY m.partyName
+ORDER BY Number;";
  
 if($result = mysqli_query($mysqli,$sql))
 {
