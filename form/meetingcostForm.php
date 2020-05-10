@@ -25,23 +25,23 @@
 	print_r($array);
   
 	foreach($array[jsonform] as $key => $output) {
-		print_r($output);
-		if($key == 'BillingID') {
+		print_r($key);
+		if($key === 'BillingID') {
 			$BillingID = $output;
 			echo $BillingID."\n";
-		}elseif($key == 'ConferenceID'){
+		}elseif($key === 'ConferenceID'){
 			$ConferenceID = $output;
 			echo $ConferenceID."\n";
-		}elseif($key == 'CostTypeID'){
+		}elseif($key === 'CostTypeID'){
 			$CostTypeID = $output;
 			echo $CostTypeID."\n";
-		}elseif($key == 'CostValue'){
+		}elseif($key === 'CostValue'){
 			$CostValue = $output;
 			echo $CostValue."\n";
-		}elseif($key == 'ReceiptName'){
+		}elseif($key === 'ReceiptName'){
 			$ReceiptName = $output;
 			echo $ReceiptName."\n";
-		}elseif($key == 'ReceiptApproverID'){
+		}elseif($key === 'ReceiptApproverID'){
 			$ReceiptApproverID = $output;
 			echo $ReceiptApproverID."\n";
 		}
