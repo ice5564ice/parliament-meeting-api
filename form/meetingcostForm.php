@@ -25,7 +25,7 @@
 	print_r($array);
   
 	foreach($array as $key => $output) {
-		print_r($key);
+		print_r($output);
 		if($key === 'BillingID') {
 			$BillingID = $output;
 			echo $BillingID."\n";
