@@ -47,7 +47,7 @@
 	} 
 
 $sql = "INSERT INTO costs (BillingID,ConferenceID,CostTypeID,CostValue,ReceiptName,ReceiptApproverID)
-VALUES ('$BillingID','$ConferenceID','$CostTypeID','$CostValue','$ReceiptName','$ReceiptApproverID')";
+VALUES ($BillingID,$ConferenceID,$CostTypeID,$CostValue,'$ReceiptName','$ReceiptApproverID')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
