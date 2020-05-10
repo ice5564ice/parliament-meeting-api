@@ -28,6 +28,7 @@
 		print_r($output);
 		if($key === 'BillingID') {
 			$BillingID = $output;
+			print_r($BillingID."\n");
 			echo $BillingID."\n";
 		}elseif($key === 'ConferenceID'){
 			$ConferenceID = $output;
