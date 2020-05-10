@@ -40,7 +40,7 @@
 		}elseif($key === 'receiptName'){
 			$ReceiptName = $output;
 			echo $ReceiptName."\n";
-		}elseif($key === 'receiptApproverID'){
+		}elseif($key === 'receiptApproveId'){
 			$ReceiptApproverID = $output;
 			echo $ReceiptApproverID."\n";
 		}
