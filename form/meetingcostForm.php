@@ -24,7 +24,7 @@
 	$array = json_decode($data,true);
 	print_r($array);
   
-	foreach($array as $key => $output) {
+	foreach($array["jsonform"] as $key => $output) {
 		if($key === 'BillingID') {
 			$BillingID = $output;
 			echo $BillingID."\n";
